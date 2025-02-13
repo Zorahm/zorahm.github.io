@@ -6,6 +6,7 @@
     <title>Контакты - ZorahM</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/contacts.css">
+    <script src="../js/contacts.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -20,11 +21,19 @@
 
         <!-- Кнопки ссылок -->
         <div class="links">
-            <a href="mailto:zorahm@foxiland.ru" class="link-button">📧 Email</a>
+            <!-- Копируемый Email -->
+            <button class="link-button copy-btn" data-copy="zorahm@foxiland.ru">📧 Скопировать Email</button>
             <a href="https://github.com/zorahm" target="_blank" class="link-button">💻 GitHub</a>
             <a href="https://t.me/ZorahM" target="_blank" class="link-button">📱 Telegram</a>
-            <a href="https://discord.com/users/123456789" target="_blank" class="link-button">🎮 Discord</a>
+            <!-- Копируемый Discord -->
+            <button class="link-button copy-btn" data-copy="@zorahm">🎮 Скопировать Discord</button>
         </div>
+    </div>
+
+    <!-- Уведомление о копировании -->
+    <div class="toast" id="toast">
+        <p id="toast-message">Текст скопирован!</p>
+        <div class="progress-bar" id="progress-bar"></div>
     </div>
 </body>
 </html>
