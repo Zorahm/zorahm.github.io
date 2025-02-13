@@ -56,6 +56,8 @@ body {
     background: #fff;
     color: #1b5e20;
     font-size: 1rem;
+    border: none; /* Убрана обводка */
+    outline: none; /* Убрана темная рамка */
     font-weight: 700;
     text-decoration: none;
     padding: 12px 20px;
@@ -66,4 +68,36 @@ body {
 .link-button:hover {
     background: #66bb6a;
     transform: translateY(-5px);
+}
+
+/* Toast уведомление */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 250px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.toast p {
+    margin: 0;
+    padding-right: 10px;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #4caf50;
+    width: 0;
+    border-radius: 5px;
+    transition: none;
 }
