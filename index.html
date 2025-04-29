@@ -1,143 +1,512 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZorahM :: Terminal Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #2d3748; }
-        ::-webkit-scrollbar-thumb { background: #4a5568; }
-        .dark ::-webkit-scrollbar-track { background: #e2e8f0; }
-        .dark ::-webkit-scrollbar-thumb { background: #cbd5e0; }
-        .terminal-cursor { animation: blink 1s step-end infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
-        .theme-transition * {
-            transition: background-color 0.3s ease, color 0.2s ease;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZorahM - Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-[#300a24] theme-transition h-screen flex items-center justify-center font-['Ubuntu_Mono']">
-    <div class="w-11/12 md:w-3/4 lg:w-1/2 bg-gray-900 dark:bg-gray-100 rounded-lg shadow-2xl overflow-hidden">
-        <!-- Terminal header -->
-        <div class="bg-gray-800 dark:bg-gray-300 px-4 py-2 flex items-center justify-between">
-            <div class="flex items-center">
-                <div class="flex space-x-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div class="text-gray-500 dark:text-gray-600 text-sm ml-4">zorahm@portfolio: ~</div>
-            </div>
-            <button id="themeToggle" class="text-gray-400 dark:text-gray-600 hover:text-white dark:hover:text-gray-800 text-sm">
-                ☀️/🌙
-            </button>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-['Inter'] transition-colors duration-300" id="body">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full overflow-hidden">
+          <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
         </div>
-
-        <!-- Terminal content -->
-        <div class="p-4 text-green-400 dark:text-green-600 text-sm overflow-y-auto h-96">
-            <!-- Header -->
-            <div class="mb-6">
-                <h1 class="text-2xl text-green-500 dark:text-green-700 mb-1">ZorahM</h1>
-                <p class="text-gray-400 dark:text-gray-600">Начинающий разработчик :)</p>
-            </div>
-
-            <!-- Projects -->
-            <div class="mb-6">
-                <div class="flex items-center mb-3">
-                    <span class="text-blue-400 dark:text-blue-600 mr-2">$</span>
-                    <h2 class="text-green-500 dark:text-green-700">Мои проекты</h2>
-                </div>
-                
-                <div class="space-y-4 ml-4">
-                    <!-- Project 1 -->
-                    <a href="https://github.com/zorahm/RepFlow" 
-                       target="_blank"
-                       class="block border-l-2 border-green-800 dark:border-green-400 pl-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors cursor-pointer group">
-                        <h3 class="text-green-300 dark:text-green-600 group-hover:text-green-400 dark:group-hover:text-green-700">RepFlow</h3>
-                        <p class="text-gray-300 dark:text-gray-600 text-xs mt-1">
-                            Приложение для администрации Arizona RP
-                        </p>
-                    </a>
-
-                    <!-- Project 2 -->
-                    <a href="https://github.com/zorahm/zoChat" 
-                       target="_blank"
-                       class="block border-l-2 border-green-800 dark:border-green-400 pl-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors cursor-pointer group">
-                        <h3 class="text-green-300 dark:text-green-600 group-hover:text-green-400 dark:group-hover:text-green-700">zoChat</h3>
-                        <p class="text-gray-300 dark:text-gray-600 text-xs mt-1">
-                            Удобный и безопасный чат для общения
-                        </p>
-                    </a>
-
-                    <!-- Project 3 -->
-                    <a href="https://github.com/zorahm/Password_Manager" 
-                       target="_blank"
-                       class="block border-l-2 border-green-800 dark:border-green-400 pl-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors cursor-pointer group">
-                        <h3 class="text-green-300 dark:text-green-600 group-hover:text-green-400 dark:group-hover:text-green-700">Password_Manager</h3>
-                        <p class="text-gray-300 dark:text-gray-600 text-xs mt-1">
-                            Сервис для хранения паролей с высокой защитой
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Contacts -->
-            <div class="mb-4">
-                <div class="flex items-center mb-3">
-                    <span class="text-blue-400 dark:text-blue-600 mr-2">$</span>
-                    <h2 class="text-green-500 dark:text-green-700">Контакты</h2>
-                </div>
-                <div class="text-gray-300 dark:text-gray-600 ml-4 space-y-1">
-                    <div>Email: <a href="mailto:contact@zorahm.dev" class="text-green-500 dark:text-green-700 hover:underline">zorahm@foxiland.ru</a></div>
-                    <div>GitHub: <a href="https://github.com/zorahm" class="text-green-500 dark:text-green-700 hover:underline">github.com/zorahm</a></div>
-                </div>
-            </div>
-
-            <!-- Cursor -->
-            <div class="flex items-center">
-                <span class="text-blue-400 dark:text-blue-600 mr-2">$</span>
-                <span class="terminal-cursor">_</span>
-            </div>
+        <h1 class="text-xl font-bold text-teal-600 dark:text-teal-400">ZorahM</h1>
+      </div>
+      
+      <div class="flex items-center space-x-6">
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.home">Home</a>
+          <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.about">About</a>
+          <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.skills">Skills</a>
+          <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.projects">Projects</a>
+          <a href="cv.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.cv">CV</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.contact">Contact</a>
         </div>
-
-        <!-- Terminal status bar -->
-        <div class="bg-gray-800 dark:bg-gray-300 px-4 py-1 text-gray-500 dark:text-gray-600 text-sm">
-            [T] Переключить тему | [CTRL+Click] Открыть ссылку
-        </div>
-    </div>
-
-    <script>
-        // Theme Toggle Logic
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
         
-        // Check saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) body.classList.add(savedTheme);
+        <div class="flex items-center space-x-3">
+          <!-- Language Switcher -->
+          <div class="relative group">
+            <select id="language-switcher" class="appearance-none bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg px-3 py-1 pr-7 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 cursor-pointer">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+            <div class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg id="theme-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-4 pb-4 shadow-lg">
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.home">Home</a>
+        <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.about">About</a>
+        <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.skills">Skills</a>
+        <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.projects">Projects</a>
+        <a href="cv.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.cv">CV</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-        // Update button text based on theme
-        const updateButtonText = () => {
-            themeToggle.textContent = body.classList.contains('dark') ? '🌙' : '☀️';
-        };
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-16">
+    <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-teal-900 opacity-10 dark:opacity-5"></div>
+    <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 dark:opacity-5"></div>
+    
+    <div class="text-center relative z-10 max-w-4xl mx-auto">
+      <div class="inline-block mb-6 p-3 bg-teal-100 dark:bg-teal-900/30 rounded-full animate-bounce-slow">
+        <div class="w-16 h-16 rounded-full overflow-hidden">
+          <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
+        </div>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-fade-in-down">ZorahM</h1>
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100" data-key="hero.subtitle">
+        Beginner Developer | Learning and Building
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-200">
+        <a href="#projects" class="inline-block bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-3 rounded-lg hover:from-teal-600 hover:to-teal-700 transition-all transform hover:scale-105 shadow-lg shadow-teal-500/20" data-key="hero.button">
+          View Projects <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="contact.html" class="inline-block border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition-all transform hover:scale-105">
+          Contact Me <i class="fas fa-paper-plane ml-2"></i>
+        </a>
+      </div>
+      
+      <div class="mt-12 animate-fade-in-up delay-300">
+        <div class="inline-flex space-x-4">
+          <a href="https://github.com/zorahM" target="_blank" class="text-gray-500 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors text-2xl">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : '');
-            updateButtonText();
-        });
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 mb-4" data-key="about.subtitle">About Me</span>
+        <h2 class="text-4xl font-bold mb-6" data-key="about.title">Turning Ideas Into Reality</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="relative group">
+            <div class="absolute -inset-2 bg-gradient-to-r from-teal-400 to-teal-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+            <div class="relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                   alt="Developer working" 
+                   class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4" data-key="about.heading">Hi, I'm ZorahM</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed" data-key="about.content">
+            I'm a beginner developer exploring Java, TypeScript, Lua, Python, and Shell scripting. I'm passionate about learning and creating tools and plugins, especially for gaming communities. My projects, from Minecraft server plugins to simple utilities, reflect my growing skills and dedication to coding.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="flex items-center">
+              <div class="mr-3 text-teal-500">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span data-key="about.list1">Problem Solving</span>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3 text-teal-500">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span data-key="about.list2">Clean Code</span>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3 text-teal-500">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span data-key="about.list3">Responsive Design</span>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3 text-teal-500">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span data-key="about.list4">Team Collaboration</span>
+            </div>
+          </div>
+          
+          <a href="cv.html" class="inline-flex items-center text-teal-600 dark:text-teal-400 font-medium hover:text-teal-700 dark:hover:text-teal-500 transition-colors">
+            <span data-key="about.button">View CV</span>
+            <i class="fas fa-download ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Toggle theme with 'T' key
-        document.addEventListener('keydown', (e) => {
-            if (e.key.toLowerCase() === 't') {
-                themeToggle.click();
-            }
-        });
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 mb-4" data-key="skills.subtitle">My Skills</span>
+        <h2 class="text-4xl font-bold mb-6" data-key="skills.title">Technologies I Work With</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" id="skills-grid">
+        <!-- Skill items will be injected here by JavaScript -->
+      </div>
+    </div>
+  </section>
 
-        // Initialize button text
-        updateButtonText();
-    </script>
-</body>
-</html>
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 mb-4" data-key="projects.subtitle">My Work</span>
+        <h2 class="text-4xl font-bold mb-6" data-key="projects.title">Recent Projects</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+      </div>
+      
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projects will be injected here by JavaScript -->
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="https://github.com/zorahm" target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition-all">
+          <span data-key="projects.viewall">View All Projects</span>
+          <i class="fas fa-external-link-alt ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+          <div class="w-6 h-6 rounded-full overflow-hidden">
+            <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
+          </div>
+          <span class="text-lg font-bold text-teal-600 dark:text-teal-400">ZorahM</span>
+        </div>
+        
+        <div class="flex items-center space-x-6">
+          <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.home">Home</a>
+          <a href="cv.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.cv">CV</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.contact">Contact</a>
+        </div>
+      </div>
+      
+      <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4 md:mb-0" data-key="footer.copyright">© 2025 ZorahM. All rights reserved.</p>
+        
+        <div class="flex space-x-4">
+          <a href="https://github.com/zorahm" class="text-gray-500 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language translations
+    const translations = {
+      en: {
+        'nav.home': 'Home',
+        'nav.about': 'About',
+        'nav.skills': 'Skills',
+        'nav.projects': 'Projects',
+        'nav.cv': 'CV',
+        'nav.contact': 'Contact',
+        'hero.subtitle': 'Beginner Developer | Learning and Building',
+        'hero.button': 'View Projects',
+        'about.subtitle': 'About Me',
+        'about.title': 'Turning Ideas Into Reality',
+        'about.heading': "Hi, I'm ZorahM",
+        'about.content': "I'm a beginner developer exploring Java, TypeScript, Lua, Python, and Shell scripting. I'm passionate about learning and creating tools and plugins, especially for gaming communities. My projects, from Minecraft server plugins to simple utilities, reflect my growing skills and dedication to coding.",
+        'about.list1': 'Problem Solving',
+        'about.list2': 'Clean Code',
+        'about.list3': 'Responsive Design',
+        'about.list4': 'Team Collaboration',
+        'about.button': 'View CV',
+        'skills.subtitle': 'My Skills',
+        'skills.title': 'Technologies I Work With',
+        'projects.subtitle': 'My Work',
+        'projects.title': 'Recent Projects',
+        'projects.language': 'Language',
+        'projects.updated': 'Updated',
+        'projects.view': 'View Project',
+        'projects.viewall': 'View All Projects',
+        'footer.home': 'Home',
+        'footer.cv': 'CV',
+        'footer.contact': 'Contact',
+        'footer.copyright': '© 2025 ZorahM. All rights reserved.'
+      },
+      ru: {
+        'nav.home': 'Главная',
+        'nav.about': 'Обо мне',
+        'nav.skills': 'Навыки',
+        'nav.projects': 'Проекты',
+        'nav.cv': 'Резюме',
+        'nav.contact': 'Контакты',
+        'hero.subtitle': 'Начинающий разработчик | Учусь и создаю',
+        'hero.button': 'Посмотреть проекты',
+        'about.subtitle': 'Обо мне',
+        'about.title': 'Превращаю идеи в реальность',
+        'about.heading': "Привет, я ZorahM",
+        'about.content': "Я начинающий разработчик, изучающий Java, TypeScript, Lua, Python и Shell-скрипты. Я увлечён обучением и созданием инструментов и плагинов, особенно для игровых сообществ. Мои проекты, от плагинов для серверов Minecraft до простых утилит, отражают мои растущие навыки и преданность программированию.",
+        'about.list1': 'Решение проблем',
+        'about.list2': 'Чистый код',
+        'about.list3': 'Адаптивный дизайн',
+        'about.list4': 'Командная работа',
+        'about.button': 'Посмотреть резюме',
+        'skills.subtitle': 'Мои навыки',
+        'skills.title': 'Технологии, с которыми я работаю',
+        'projects.subtitle': 'Мои работы',
+        'projects.title': 'Последние проекты',
+        'projects.language': 'Язык',
+        'projects.updated': 'Обновлено',
+        'projects.view': 'Посмотреть проект',
+        'projects.viewall': 'Все проекты',
+        'footer.home': 'Главная',
+        'footer.cv': 'Резюме',
+        'footer.contact': 'Контакты',
+        'footer.copyright': '© 2025 ZorahM. Все права защищены.'
+      }
+    };
+
+    // Skills data
+    const skills = [
+      { name: "Java", icon: "fab fa-java", color: "text-red-500" },
+      { name: "TypeScript", icon: "fas fa-code", color: "text-blue-500" },
+      { name: "Lua", icon: "fas fa-gamepad", color: "text-blue-700" },
+      { name: "Python", icon: "fab fa-python", color: "text-yellow-500" },
+      { name: "Shell", icon: "fas fa-terminal", color: "text-green-500" },
+      { name: "HTML5", icon: "fab fa-html5", color: "text-orange-500" }
+    ];
+
+    // Project data
+    const projectsData = [
+      {
+        name: "zoChat",
+        description: {
+          en: "Chat plugin for Minecraft servers, enhancing communication features.",
+          ru: "Плагин чата для серверов Minecraft, улучшающий функции общения."
+        },
+        language: "Java",
+        url: "https://github.com/zorahm/zochat",
+        updated: "2 weeks ago"
+      },
+      {
+        name: "Ubuntu-autologin",
+        description: {
+          en: "Shell script for automating login on Ubuntu systems.",
+          ru: "Shell-скрипт для автоматического входа в системы Ubuntu."
+        },
+        language: "Shell",
+        url: "https://github.com/zorahm/ubuntu-autologin",
+        updated: "3 weeks ago"
+      },
+      {
+        name: "mtiworlds",
+        description: {
+          en: "TypeScript project for managing game worlds.",
+          ru: "Проект на TypeScript для управления игровыми мирами."
+        },
+        language: "TypeScript",
+        url: "https://github.com/zorahm/mtiworlds",
+        updated: "last month"
+      },
+      {
+        name: "RepFlow",
+        description: {
+          en: "Administration tool for Arizona RP, catching and reporting data.",
+          ru: "Инструмент администрирования для Arizona RP, сбор и отчётность данных."
+        },
+        language: "Lua",
+        url: "https://github.com/zorahm/repflow",
+        updated: "Mar 21, 2025"
+      },
+      {
+        name: "MinistryOfHealthMan",
+        description: {
+          en: "TypeScript analogue of SetHP for health management in games.",
+          ru: "Аналог SetHP на TypeScript для управления здоровьем в играх."
+        },
+        language: "TypeScript",
+        url: "https://github.com/zorahm/ministryofhealthman",
+        updated: "Mar 16, 2025"
+      },
+      {
+        name: "zorahm.github.io",
+        description: {
+          en: "Personal portfolio website hosted on GitHub Pages.",
+          ru: "Личный сайт-портфолио, размещённый на GitHub Pages."
+        },
+        language: "HTML",
+        url: "https://github.com/zorahm/zorahm.github.io",
+        updated: "Mar 15, 2025"
+      },
+      {
+        name: "password_manager",
+        description: {
+          en: "Secure password management tool built in Python.",
+          ru: "Безопасный менеджер паролей, созданный на Python."
+        },
+        language: "Python",
+        url: "https://github.com/zorahm/password_manager",
+        updated: "Jul 2, 2024"
+      },
+      {
+        name: "MedHelper",
+        description: {
+          en: "Lua-based tool for health-related functionalities in games.",
+          ru: "Инструмент на Lua для функций, связанных со здоровьем в играх."
+        },
+        language: "Lua",
+        url: "https://github.com/zorahm/MedHelper",
+        updated: "May 12, 2024"
+      }
+    ];
+
+    // Language switching
+    const languageSwitcher = document.getElementById('language-switcher');
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      renderProjects(lang);
+      renderSkills();
+      localStorage.setItem('language', lang);
+    }
+
+    languageSwitcher.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+
+    // Theme toggling
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.getElementById('body');
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+      } else {
+        body.classList.remove('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+      }
+      localStorage.setItem('theme', theme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Render skills
+    function renderSkills() {
+      const skillsGrid = document.getElementById('skills-grid');
+      skillsGrid.innerHTML = skills.map(skill => `
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all transform hover:scale-105 text-center">
+          <i class="${skill.icon} ${skill.color} text-3xl mb-4"></i>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">${skill.name}</h3>
+        </div>
+      `).join('');
+    }
+
+    // Render projects
+    function renderProjects(lang = 'en') {
+      const projectsGrid = document.getElementById('projects-grid');
+      projectsGrid.innerHTML = projectsData.map(project => `
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-3">${project.name}</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">${project.description[lang]}</p>
+            <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+              <span><i class="fas fa-code mr-1"></i> ${project.language}</span>
+              <span><i class="fas fa-clock mr-1"></i> ${project.updated}</span>
+            </div>
+          </div>
+          <div class="px-6 py-4 bg-gray-50 dark:bg-gray-700">
+            <a href="${project.url}" target="_blank" class="text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-500 font-medium">
+              ${translations[lang]['projects.view']} <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLanguage = localStorage.getItem('language') || 'en';
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      languageSwitcher.value = savedLanguage;
+      setLanguage(savedLanguage);
+      setTheme(savedTheme);
+    });
+  </script>
+
+  <style>
+    /* Custom animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounceSlow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-fade-in-down { animation: fadeInDown 0.6s ease-out; }
+    .animate-fade-in-up { animation: fadeInUp 0.6s ease-out; }
+    .animate-bounce-slow { animation: bounceSlow 3s infinite ease-in-out; }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+  </style>

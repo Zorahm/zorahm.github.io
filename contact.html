@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZorahM - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-['Inter'] transition-colors duration-300" id="body">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full overflow-hidden">
+          <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
+        </div>
+        <h1 class="text-xl font-bold text-teal-600 dark:text-teal-400">ZorahM</h1>
+      </div>
+      
+      <div class="flex items-center space-x-6">
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.home">Home</a>
+          <a href="cv.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.cv">CV</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.contact">Contact</a>
+        </div>
+        
+        <div class="flex items-center space-x-3">
+          <!-- Language Switcher -->
+          <div class="relative group">
+            <select id="language-switcher" class="appearance-none bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg px-3 py-1 pr-7 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 cursor-pointer">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+            <div class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg id="theme-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-4 pb-4 shadow-lg">
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.home">Home</a>
+        <a href="cv.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.cv">CV</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="py-20 pt-24">
+    <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Avatar -->
+      <div class="mb-8">
+        <div class="inline-block p-3 bg-teal-100 dark:bg-teal-900/30 rounded-full shadow-md">
+          <div class="w-32 h-32 rounded-full overflow-hidden">
+            <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <div class="mb-12">
+        <h2 class="text-4xl font-bold mb-4" data-key="contact.title">Connect With Me</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="space-y-4">
+        <a href="https://github.com/zorahm" target="_blank" class="flex items-center justify-center space-x-3 px-6 py-3 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all transform hover:scale-105">
+          <i class="fab fa-github text-xl"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://t.me/zorahmwork" target="_blank" class="flex items-center justify-center space-x-3 px-6 py-3 bg-blue-500 dark:bg-blue-600 text-white rounded-lg hover:bg-blue-600 dark:hover:bg-blue-700 transition-all transform hover:scale-105">
+          <i class="fab fa-telegram text-xl"></i>
+          <span>Telegram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+          <div class="w-6 h-6 rounded-full overflow-hidden">
+            <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
+          </div>
+          <span class="text-lg font-bold text-teal-600 dark:text-teal-400">ZorahM</span>
+        </div>
+        
+        <div class="flex items-center space-x-6">
+          <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.home">Home</a>
+          <a href="cv.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.cv">CV</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.contact">Contact</a>
+        </div>
+      </div>
+      
+      <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
+        <p class="text-gray-500 dark:text-gray-400 text-sm" data-key="footer.copyright">© 2025 ZorahM. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language translations
+    const translations = {
+      en: {
+        'nav.home': 'Home',
+        'nav.cv': 'CV',
+        'nav.contact': 'Contact',
+        'contact.title': 'Connect With Me',
+        'footer.home': 'Home',
+        'footer.cv': 'CV',
+        'footer.contact': 'Contact',
+        'footer.copyright': '© 2025 ZorahM. All rights reserved.'
+      },
+      ru: {
+        'nav.home': 'Главная',
+        'nav.cv': 'Резюме',
+        'nav.contact': 'Контакты',
+        'contact.title': 'Свяжитесь со мной',
+        'footer.home': 'Главная',
+        'footer.cv': 'Резюме',
+        'footer.contact': 'Контакты',
+        'footer.copyright': '© 2025 ZorahM. Все права защищены.'
+      }
+    };
+
+    // Language switching
+    const languageSwitcher = document.getElementById('language-switcher');
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      localStorage.setItem('language', lang);
+    }
+
+    languageSwitcher.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+
+    // Theme toggling
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.getElementById('body');
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+      } else {
+        body.classList.remove('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+      }
+      localStorage.setItem('theme', theme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLanguage = localStorage.getItem('language') || 'en';
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      languageSwitcher.value = savedLanguage;
+      setLanguage(savedLanguage);
+      setTheme(savedTheme);
+    });
+  </script>

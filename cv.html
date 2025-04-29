@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZorahM - CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-['Inter'] transition-colors duration-300" id="body">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full overflow-hidden">
+          <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
+        </div>
+        <h1 class="text-xl font-bold text-teal-600 dark:text-teal-400">ZorahM</h1>
+      </div>
+      
+      <div class="flex items-center space-x-6">
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.home">Home</a>
+          <a href="cv.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.cv">CV</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors font-medium" data-key="nav.contact">Contact</a>
+        </div>
+        
+        <div class="flex items-center space-x-3">
+          <!-- Language Switcher -->
+          <div class="relative group">
+            <select id="language-switcher" class="appearance-none bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg px-3 py-1 pr-7 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 cursor-pointer">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+            <div class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg id="theme-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-4 pb-4 shadow-lg">
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.home">Home</a>
+        <a href="cv.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.cv">CV</a>
+        <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors py-2" data-key="nav.contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CV Section -->
+  <section class="py-20 pt-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 mb-4" data-key="cv.subtitle">Curriculum Vitae</span>
+        <h2 class="text-4xl font-bold mb-6" data-key="cv.title">My CV</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+        <!-- Personal Info -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400" data-key="cv.personal">Personal Information</h3>
+          <div class="space-y-2 text-gray-600 dark:text-gray-300">
+            <p><span class="font-medium" data-key="cv.name">Name:</span> ZorahM</p>
+            <p><span class="font-medium" data-key="cv.email">Email:</span> <a href="mailto:zorahm@foxiland.ru" class="text-teal-500 hover:underline">zorahm@foxiland.ru</a></p>
+            <p><span class="font-medium" data-key="cv.location">Location:</span> Moscow, Russia</p>
+            <p><span class="font-medium" data-key="cv.github">GitHub:</span> <a href="https://github.com/zorahm" class="text-teal-500 hover:underline">github.com/zorahm</a></p>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400" data-key="cv.education">Education</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-lg font-medium" data-key="cv.education1.title">Self-Taught Developer</h4>
+              <p class="text-gray-500 dark:text-gray-400 text-sm" data-key="cv.education1.duration">2023 - Present</p>
+              <p class="text-gray-600 dark:text-gray-300" data-key="cv.education1.description">Learning programming through online resources, focusing on Java, TypeScript, Lua, Python, and Shell scripting.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400" data-key="cv.skills">Skills</h3>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+            <li>Java</li>
+            <li>TypeScript</li>
+            <li>Lua</li>
+            <li>Python</li>
+            <li>Shell Scripting</li>
+            <li>HTML5</li>
+            <li>Responsive Design</li>
+            <li>Problem Solving</li>
+          </ul>
+        </div>
+
+        <!-- Experience -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400" data-key="cv.experience">Experience</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-lg font-medium" data-key="cv.experience1.title">Freelance Developer</h4>
+              <p class="text-gray-500 dark:text-gray-400 text-sm" data-key="cv.experience1.duration">2024 - Present</p>
+              <p class="text-gray-600 dark:text-gray-300" data-key="cv.experience1.description">Developed plugins and tools for gaming communities, including Minecraft server plugins and administration tools for Arizona RP.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400" data-key="cv.projects">Key Projects</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-lg font-medium">zoChat</h4>
+              <p class="text-gray-600 dark:text-gray-300" data-key="cv.project1.description">Chat plugin for Minecraft servers, enhancing communication features. Built with Java.</p>
+              <a href="https://github.com/zorahm/zochat" class="text-teal-500 hover:underline">GitHub</a>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium">RepFlow</h4>
+              <p class="text-gray-600 dark:text-gray-300" data-key="cv.project2.description">Administration tool for Arizona RP, focusing on data reporting. Built with Lua.</p>
+              <a href="https://github.com/zorahm/repflow" class="text-teal-500 hover:underline">GitHub</a>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium">Ubuntu-autologin</h4>
+              <p class="text-gray-600 dark:text-gray-300" data-key="cv.project3.description">Shell script for automating login on Ubuntu systems.</p>
+              <a href="https://github.com/zorahm/ubuntu-autologin" class="text-teal-500 hover:underline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+          <div class="w-6 h-6 rounded-full overflow-hidden">
+            <img src="avatar.png" alt="ZorahM Avatar" class="w-full h-full object-cover">
+          </div>
+          <span class="text-lg font-bold text-teal-600 dark:text-teal-400">ZorahM</span>
+        </div>
+        
+        <div class="flex items-center space-x-6">
+          <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.home">Home</a>
+          <a href="cv.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.cv">CV</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors" data-key="footer.contact">Contact</a>
+        </div>
+      </div>
+      
+      <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
+        <p class="text-gray-500 dark:text-gray-400 text-sm" data-key="footer.copyright">© 2025 ZorahM. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language translations
+    const translations = {
+      en: {
+        'nav.home': 'Home',
+        'nav.cv': 'CV',
+        'nav.contact': 'Contact',
+        'cv.subtitle': 'Curriculum Vitae',
+        'cv.title': 'My CV',
+        'cv.personal': 'Personal Information',
+        'cv.name': 'Name',
+        'cv.email': 'Email',
+        'cv.phone': 'Phone',
+        'cv.location': 'Location',
+        'cv.github': 'GitHub',
+        'cv.education': 'Education',
+        'cv.education1.title': 'Self-Taught Developer',
+        'cv.education1.duration': '2023 - Present',
+        'cv.education1.description': 'Learning programming through online resources, focusing on Java, TypeScript, Lua, Python, and Shell scripting.',
+        'cv.skills': 'Skills',
+        'cv.experience': 'Experience',
+        'cv.experience1.title': 'Freelance Developer',
+        'cv.experience1.duration': '2024 - Present',
+        'cv.experience1.description': 'Developed plugins and tools for gaming communities, including Minecraft server plugins and administration tools for Arizona RP.',
+        'cv.projects': 'Key Projects',
+        'cv.project1.description': 'Chat plugin for Minecraft servers, enhancing communication features. Built with Java.',
+        'cv.project2.description': 'Administration tool for Arizona RP, focusing on data reporting. Built with Lua.',
+        'cv.project3.description': 'Shell script for automating login on Ubuntu systems.',
+        'footer.home': 'Home',
+        'footer.cv': 'CV',
+        'footer.contact': 'Contact',
+        'footer.copyright': '© 2025 ZorahM. All rights reserved.'
+      },
+      ru: {
+        'nav.home': 'Главная',
+        'nav.cv': 'Резюме',
+        'nav.contact': 'Контакты',
+        'cv.subtitle': 'Резюме',
+        'cv.title': 'Моё резюме',
+        'cv.personal': 'Личная информация',
+        'cv.name': 'Имя',
+        'cv.email': 'Email',
+        'cv.phone': 'Телефон',
+        'cv.location': 'Местоположение',
+        'cv.github': 'GitHub',
+        'cv.education': 'Образование',
+        'cv.education1.title': 'Самоучка-разработчик',
+        'cv.education1.duration': '2023 - Настоящее время',
+        'cv.education1.description': 'Изучение программирования через онлайн-ресурсы, с акцентом на Java, TypeScript, Lua, Python и Shell-скрипты.',
+        'cv.skills': 'Навыки',
+        'cv.experience': 'Опыт',
+        'cv.experience1.title': 'Фриланс-разработчик',
+        'cv.experience1.duration': '2024 - Настоящее время',
+        'cv.experience1.description': 'Разработка плагинов и инструментов для игровых сообществ, включая плагины для серверов Minecraft и инструменты администрирования для Arizona RP.',
+        'cv.projects': 'Ключевые проекты',
+        'cv.project1.description': 'Плагин чата для серверов Minecraft, улучшающий функции общения. Создан на Java.',
+        'cv.project2.description': 'Инструмент администрирования для Arizona RP, сосредоточенный на отчётности данных. Создан на Lua.',
+        'cv.project3.description': 'Shell-скрипт для автоматизации входа в системы Ubuntu.',
+        'footer.home': 'Главная',
+        'footer.cv': 'Резюме',
+        'footer.contact': 'Контакты',
+        'footer.copyright': '© 2025 ZorahM. Все права защищены.'
+      }
+    };
+
+    // Language switching
+    const languageSwitcher = document.getElementById('language-switcher');
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      localStorage.setItem('language', lang);
+    }
+
+    languageSwitcher.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+
+    // Theme toggling
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.getElementById('body');
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+      } else {
+        body.classList.remove('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+      }
+      localStorage.setItem('theme', theme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLanguage = localStorage.getItem('language') || 'en';
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      languageSwitcher.value = savedLanguage;
+      setLanguage(savedLanguage);
+      setTheme(savedTheme);
+    });
+  </script>
